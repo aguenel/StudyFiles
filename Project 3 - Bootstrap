@@ -1,0 +1,295 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+
+<!--Most of this code has been taken from the video on Youtube for learning purposes. The video link is: https://www.youtube.com/watch?v=e6VYRVRoC40 -->
+
+<head>
+
+	<title>First Bootstrap Project</title>
+	<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+	
+	<!--code taken from: google.com/fonts
+		<link href="fonts.googleapis.com/css?family=Roboto:400,400italic,700" rel="stylesheet" type="text/css">
+	-->
+	
+	<!--Personal stylesheet
+		<link href="css/style.css" rel="stylesheet">
+	-->
+	
+	<!--Taken from: http://getbootstrap.com/getting-started/#download--> 
+	  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!--Taken from: http://getbootstrap.com/getting-started/#download-->
+	  <!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<head>
+
+	<style>
+		body{
+			padding-top: 50px;
+		}
+	</style>
+
+<body>
+	
+	<!--Navbar-->
+	<!--bootstrap by fault has two colors for the navbar: black and white. "navbar-inverse" makes the navbar black-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" 
+				data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a href="" class="navbar-brand">StudySync Lonely Coder</a>
+			</div><!--Navbar Header-->
+			<div class="collapse navbar-collapse" id="navbar-collapse"><!--NOTE: the 'id="navbar-collapse"' is taken from the "button" above-->
+				
+			<a href="" class="btn btn-default navbar-btn navbar-right">Download Now</a>
+				<ul class="nav navbar-nav">
+					<li><a href="#feedback">Feedback</a>
+					<li><a href="#gallery">Gallery</a>
+					<li><a href="#features">Features</a>
+					<li><a href="#faq">FAQ</a>
+					<li><a href="#contact">Contact Us</a>
+				</ul>
+			</div>
+		</div><!--End Container-->
+	</nav><!--End Navbar-->
+
+	<!--jumbotron-->
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>Hello World!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<div class="btn-group">
+				<a href="" class="btn btn-lg btn-info">Download App</a>
+				<a href="" class="btn btn-lg btn-default">Visit Store</a>
+				<a href="" class="btn btn-lg btn-warning">Spread the Word</a>
+			</div>
+		</div><!--End container-->
+	</div><!--End jumbotron-->
+
+
+	<div class="container">
+		<section>
+			<div class="page-header" id="feedback">
+				<h2>Feedback. <small>Check out the Awesome Feedback</small></h2>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.</p>
+						<footer>John Doe</footer>
+					</blockquote>
+				</div>
+				<div class="col-lg-4">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.</p>
+						<footer>John Doe</footer>
+					</blockquote>
+				</div>
+				<div class="col-lg-4">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.</p>
+						<footer>John Doe</footer>
+					</blockquote>
+				</div>
+			</div>
+		</section>
+	</div><!--End container-->
+
+<!--Call to action-->
+	<section>
+		<!--the class "well" below makes the background of the div grey-->
+		<div class="well">
+			<div class="container text-center">
+				<h3>Subscribe for more free stuff</h3>
+				<p>Enter your name and email</p>
+
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<label for="subscription">Subscribe</label>
+						<input type="text" class="form-control" id="subscription" placeholder="Your name">
+					</div>
+					<div class="form-group">
+						<label for="email">Email Address</label>
+						<input type="text" class="form-control" id="Email" placeholder="Enter Your Email">
+					</div>
+					<button type="submit" class="btn btn-default">Subscribe</button>
+					<!--the "hr" tag adds space between the content and the bottom of the webpage; this was done purely for aesthetics-->
+					<hr>
+				</form>
+
+			</div><!--end container-->
+		</div><!--end well-->
+	</section><!--End of call to action-->
+
+<!--Gallery-->
+	<div class="container">
+		<section>
+			<div class="page-header" id="gallery">
+				<h2>Gallery. <small> Check out the Awesome Gallery</small></h2>
+			</div>
+
+			<div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+				<ol class="carousel-indicators">
+				<!--first data-slide-to always starts with 0(zero)-->
+					<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+					<li data-target="#screenshot-carousel" data-slide-to="3"></li>
+				</ol>
+				<!--when using the carousel, make sure your images are the same size, otherwise your content will shift around on the page due to the size difference. -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="img/castle.jpg" alt="text that describes image">
+						<div class="carousel-caption">
+							<h3>Castle heading</h3>
+							<p>This is the caption<p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/coastline.jpg" alt="text that describes image">
+						<div class="carousel-caption">
+							<h3>Coast heading</h3>
+							<p>This is the caption<p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/dock.jpg" alt="text that describes image">
+						<div class="carousel-caption">
+							<h3>Dock heading</h3>
+							<p>This is the caption<p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="img/river.jpg" alt="text that describes image">
+						<div class="carousel-caption">
+							<h3>River heading</h3>
+							<p>This is the caption<p>
+						</div>
+					</div>
+				</div><!--End carousel inner-->
+				<!--the glyphicons below were taken from: getboostrap.com/components -->
+				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a href="#screenshot-carousel" class="right carousel-control" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div><!--end carousel-->
+
+			<hr>
+
+
+		</section>
+	</div><!--End Container>
+
+	<!-- features -->
+	<div class="container">
+		<section>
+			<div class="page-header" id="features">
+				<h2>Features. <small> Some of the coolest features of this app.</small></h2>
+			</div><!--end of page header-->
+
+			<div class="row">
+				<div class="col-lg-8">
+					<h3>This is the heading.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.<p>
+				</div>
+				<div class="col-lg-4">
+					<img src="img/rat.jpg" class="img-responsive" alt="text about image">
+				</div>
+			</div><!-- End row-->
+			<div class="row">
+				<div class="col-lg-8">
+					<h3>This is the heading.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.<p>
+				</div>
+				<div class="col-lg-4">
+					<img src="img/castle.jpg" class="img-responsive" alt="text about image">
+				</div>
+			</div><!-- End row-->
+			<div class="row">
+				<div class="col-lg-8">
+					<h3>This is the heading.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.<p>
+				</div>
+				<div class="col-lg-4">
+					<img src="img/dock.jpg" class="img-responsive" alt="text about image">
+				</div>
+			</div><!-- End row-->
+
+			<hr>
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-ok"></span>
+							<h4>This is the heading</h4>
+							<p>This is what I mean. It is totally different.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-star"></span>
+							<h4>This is the heading</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-play-circle"></span>
+							<h4>This is the heading</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus tellus sed lobortis accumsan. Sed tempor erat leo, non vehicula odio ullamcorper at. Vivamus sollicitudin enim ex, in tincidunt dolor rutrum quis.</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- end row -->
+
+		</section>
+	</div><!--End Container-->
+
+
+
+
+
+
+
+
+
+
+	<!--Taken from: jquery.com/download, right-clicked on "Download the compressed, production jQuery 3.0.0" link to open in a new tab and copied and pasted that link below-->
+	<!-- 
+	this jQuery script was not working so replaced it with the one below -- <script scr="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+
+
+
+
+
+
+
+
+<html>
